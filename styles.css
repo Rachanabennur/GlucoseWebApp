@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -16,17 +19,12 @@
     box-shadow: 0 3px 15px rgba(0,0,0,.4);
   }
   nav ul{
-    /*float: center;
-    align-items: center;
-    justify-content: space-between;*/
     display: flex;
     margin-left: 400px;
     
   }
   nav ul li{
     display: inline-block;
-    /*align-items: center;
-    justify-content: center;*/
     padding: 0.5rem;
 
   }
@@ -64,8 +62,6 @@
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    /*display: flex;
-    flex-direction: column;*/
   }
   nav ul li:hover > ul{
     top: 70px;
@@ -90,45 +86,62 @@
   .calculate{
     display: flex;
     flex-direction: row;
-    background-color: rgb(226, 215, 215);
     width: 500px;
     height: 500px;
     align-items: center;
     margin-left: 500px;
-  
   }
 
-  .glucose, .bmi{
+  .bmi{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    border-style: inset;
+     border-color: beige;
+     border-left-width: 4px;
+     border-top-width: 4px;
+     align-items: center;
+  } 
+  .glucose, .sweat{
      display: flex;
      flex-direction: column;
      margin: 50px;
      padding: 30px;
-     border: solid black;
+     border-style: inset;
+     border-color: beige;
+     border-left-width: 4px;
+     border-top-width: 4px;
   }
 
-  #gvalue, #height, #weight{
+  #gvalue, #height, #weight, #sweatvalue{
     width: 300px;
     padding: 15px 20px;
     margin: 15px 0;
     box-sizing: border-box;
-  }
-  #gvalue:focus, #height:focus, #weight:focus{
   
-      border: 3px solid #555;
+    border-color: beige;
+    border-left-width : 2px;
+     border-top-width:  2px;
+  }
+  #gvalue:focus, #height:focus, #weight:focus, #sweatvalue:focus{
+  
+      border: 2px inset rgb(75, 78, 76);
+      outline: green;
     
   }
-  #btn1, #btn2{
+  #btn1, #btn2, #btn3, #btn4{
   background-color: #4CAF50;
   border: none;
   color: white;
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
-  cursor: pointer
+  cursor: pointer;
+  width: 300px;
   }
- /* input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
+ 

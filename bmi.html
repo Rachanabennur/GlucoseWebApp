@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glucose from Sweat</title>
+    <title>bmi calculator</title>
     <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <div id="nav-placeholder"></div>
-    
-    <script>
+
+    <div id="nav-placeholder"> </div>
+     <script>
     $(function(){
       $("#nav-placeholder").load("navigation.html");
     });
     </script>
-    
+
+    <div class="bmi">
+        <label for="bmi">Enter Height</label>
+        <input type="text" name="height" id="height">
+        <label for="bmi">Enter Weight</label>
+        <input type="text" name="weight" id="weight">
+        <input type="button" id="btn4" value="Know my BMI">
+    </div>
+
 </body>
 </html>
