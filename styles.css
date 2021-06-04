@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  body{
+    font-family: sans-serif;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  nav{
+    height: 100px;
+    background: #063247;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  }
+  nav ul{
+    /*float: center;
+    align-items: center;
+    justify-content: space-between;*/
+    display: flex;
+    margin-left: 400px;
+    
+  }
+  nav ul li{
+    display: inline-block;
+    /*align-items: center;
+    justify-content: center;*/
+    padding: 0.5rem;
+
+  }
+  nav ul li a{
+    color: white;
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    font-size: 24px;
+    background: #063247;
+    transition: .5s;
+  }
+
+  nav ul .dropdown{
+      position: relative;
+  }
+
+  .dropmenu {
+    position: absolute;
+    top: 100%; /* Bottom of button */
+    right: 0;
+    margin-left: -100px; /* More to the left */
+  }
+  nav ul li a:hover{
+   background-color: azure;
+   color: rgb(6, 6, 61);
+  }
+  
+  
+  nav ul ul{
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid #23dbdb;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+  nav ul ul li{
+    width: 170px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #042331;
+    border-top: none;
+  }
+  nav ul ul li a{
+    line-height: 50px;
+  }
+  
+  .calculate{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(226, 215, 215);
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    margin-left: 500px;
+  
+  }
+
+  .glucose, .bmi{
+     display: flex;
+     flex-direction: column;
+     margin: 50px;
+     padding: 30px;
+     border: solid black;
+  }
+
+  #gvalue, #height, #weight{
+    width: 300px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    box-sizing: border-box;
+  }
+  #gvalue:focus, #height:focus, #weight:focus{
+  
+      border: 3px solid #555;
+    
+  }
+  #btn1, #btn2{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer
+  }
+ /* input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
