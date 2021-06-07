@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bmi calculator</title>
+    <title>BMI calculator</title>
     <link rel="stylesheet" href="styles.css"/>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -16,14 +16,49 @@
       $("#nav-placeholder").load("navigation.html");
     });
     </script>
+    <h1 id="heading">BMI- Body Mass Index</h1>
+
+    <div class="description">
+        <p class="info">Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters.
+        A high BMI can be an indicator of high body fatness.
+        BMI can be used to screen for weight categories that may lead to health problems but it is not diagnostic of the body fatness or health of an individual.</p>
+
+        <p class="info">BMI does not measure body fat directly, but BMI is moderately correlated with more direct measures of body fat 1,2,3. 
+        Furthermore, BMI appears to be as strongly correlated with various metabolic and disease outcome as are these more direct measures of body fatness 4,5,6,7,8,9.</p>
+    </div>
+
+    <img id="image" src="https://www.cdc.gov/healthyweight/images/assessing/bmi-adult-fb-600x315.jpg" />
 
     <div class="bmi">
-        <label for="bmi">Enter Height</label>
+        <label for="bmi">Enter Height(cm)</label>
         <input type="text" name="height" id="height">
-        <label for="bmi">Enter Weight</label>
+        <label for="bmi">Enter Weight(kg)</label>
         <input type="text" name="weight" id="weight">
-        <input type="button" id="btn4" value="Know my BMI">
+        <input type="button" id="btn4" value="Calculate BMI" onclick="BMI()">
+        <p id="result"></p>
     </div>
+
+
+    <script type="text/javascript">
+    function BMI(){
+        var h=document.getElementById("height").value;
+        var w=document.getElementById("weight").value;
+        var bmi=w/(h/100*h/100);
+        var bmio=(bmi.toFixed(2));
+
+        if (bmio<18.5){
+            var result="Underweight";
+        }else if(bmio>=18.5 && bmio<25.0) {
+            var result="Normal";
+        }else{
+            var result="Overweight";
+        }
+
+        document.getElementById("result").innerHTML="Your BMI is "+ bmio+ "(" +result+ ")";
+    }
+
+        
+    </script>
 
 </body>
 </html>
