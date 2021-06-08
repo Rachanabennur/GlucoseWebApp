@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+    <div id="nav-placeholder"> 
+
+    </div>
+     <script>
+        $(function(){
+        $("#nav-placeholder").load("navigation.html");
+        });
+     </script>
+    <h1 id="heading">Pills Reminder</h1>
+
+    <div class="morning">
+        <h3>Good Morning</h3>
+        <ol class="content">
+            <li class="tablet">Pill A <p class="pill_tablet" onClick="tablet_taken()"> 9:30am </p></li>
+            <li href="#" class="tablet">Pill B <p class="pill_tablet"> 9:30am </p></li>
+            <li href="#" class="tablet">Pill C <p class="pill_tablet"> 9:30am </p></li>
+        </ol>
+    </div>
+
+    <div class="afternoon">
+        <h3>Good Afternoon</h3>
+        <ol class="content">
+            <li class="tablet">Pill A <p class="pill_tablet" onClick="tablet_taken()"> 9:30am </p></li>
+            <li href="#" class="tablet">Pill B <p class="pill_tablet"> 9:30am </p></li>
+            <li href="#" class="tablet">Pill C <p class="pill_tablet"> 9:30am </p></li>
+        </ol>
+    </div>
+
+    <div class="night">
+        <h3>Good Night</h3>
+        <ol class="content">
+            <li class="tablet" onClick="tablet_taken()"><a>Pill A <p class="pill_tablet"> 9:30am </p></a></li>
+            <li class="tablet">Pill B <p class="pill_tablet"> 9:30am </p></li>
+            <li class="tablet">Pill C <p class="pill_tablet"> 9:30am </p></li>
+        </ol>
+    </div>
+
+    <script>
+        function tablet_taken(){
+            var div=document.getElementByClassName("tablet");
+            div.style.display="none";
+
+        }
+    </script>
+
+</body>
+</html>
