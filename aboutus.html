@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body{
+          background-image: url(https://bit.ly/3w3b6rH);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+      </style>
+       <link rel="stylesheet" href="styles.css"/>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("navigation.html");
+    });
+    </script>
+
+    <div class="research">
+      <div class="significance">
+          <p id="head3"><b>Significance of Non-Invasive Method of Glucose Determination </b></p>
+          <p class="info">The aim of the project is to devise the best non-invasive technique to measure the blood glucose level. 
+              Though there are already existing non-invasive methods which are employed in the market, 
+              they are known to cause ill-effects to the patient’s health since they involve radiation. 
+              Therefore, to overcome the limitations of such methods, this is an attempt to design a user-friendly, 
+              economic and environmental friendly apparatus for determining blood glucose level.
+        </p>
+
+        <p class="info">Under the hardware requirements we elaborated on the hardware components needed for the implementation 
+            of the project such as zinc and copper conductors, arduino, bluetooth chip, potentiometer and temperature sensor.
+        </p>
+      </div>
+      <div class="circuit">
+          <img src="circuit.jpeg">
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        body{
+          background-image: url(https://bit.ly/3w3b6rH);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+      </style>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+        
+    <div class="user-profile">
+       <div class="general">
+           <p id="head1">Basic Information</p>
+           <label for="firstname"><b>Enter First Name</b></label>
+           <input type="text" id="firstname" name="firstname" placeholder="First Name"><br>
+
+           <label for="middlename"><b>Enter Middle Name</b></label>
+           <input type="text" id="middlename" name="middlename" placeholder="Middle Name"><br>
+
+           <label for="lastname"><b>Enter Last Name</b></label>
+           <input type="text" id="lastname" name="lastname" placeholder="Last Name"><br>
+
+           <label for="email"><b>Enter Your Email ID</b></label>
+          <input type="email" placeholder="Enter Email" name="email" required><br>
+
+          <label for="number"><b>Enter Your Phone Number</b></label>
+          <input type="tel" placeholder="Enter your phone number" name="number"><br>
+
+          <p><b>Select your gender</b></p>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male"><b>Male</b></label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female"><b>Female</b></label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other"><b>Other</b></label><br>
+
+          <p><b>Select your age</b></p>
+          <label for="age"><b>Age</b></label>
+          <select class="1-100"></select><br><br>
+
+         
+          <label for="blood"><b>Select your blood group:</b></label>
+          <select name="bloodgroups" id="bloodgroups">
+            <option value="ap">A+ve</option>
+            <option value="an">A-ve</option>
+            <option value="bp">B+ve</option>
+            <option value="bn">B-ve</option>
+            <option value="op">O+ve</option>
+            <option value="on">O-ve</option>
+            <option value="abp">AB+ve</option>
+            <option value="abn">AB-ve</option>
+          </select>
+
+       </div>
+
+       <div class="medical">
+        <p id="head2">Medical Information</p>
+
+        <p class="questions">Do you have ashtma or had before?</p>
+         <input type="radio" id="yes" name="ashtma" value="yes">
+         <label for="yes">Yes</label>
+         <input type="radio" id="no" name="ashtma" value="no">
+         <label for="no">No</label>
+         <input type="radio" id="unsure" name="ashtma" value="unsure">
+         <label for="unsure">Not sure</label>
+
+         <p class="questions">Do you have heart related problem or had before?</p>
+         <input type="radio" id="yes" name="heart" value="yes">
+         <label for="yes">Yes</label>
+         <input type="radio" id="no" name="heart" value="no">
+         <label for="no">No</label>
+         <input type="radio" id="unsure" name="heart" value="unsure">
+         <label for="unsure">Not sure</label><br>
+         <input type="text" id="heart-issue" placeholder="If yes, mention the problem">
+
+         <p class="questions">Do you have bleeding problem or bleeding disorder?</p>
+         <input type="radio" id="yes" name="bleed" value="yes">
+         <label for="yes">Yes</label>
+         <input type="radio" id="no" name="bleed" value="no">
+         <label for="no">No</label>
+         <input type="radio" id="unsure" name="bleed" value="unsure">
+         <label for="unsure">Not sure</label><br>
+         <input type="text" id="bleed-issue" placeholder="If yes, mention the problem">
+
+         <p class="questions">Have you ever had hepatitis, jaundice or liver diseaese?</p>
+         <input type="radio" id="yes" name="liver" value="yes">
+         <label for="yes">Yes</label>
+         <input type="radio" id="no" name="liver" value="no">
+         <label for="no">No</label>
+         <input type="radio" id="unsure" name="liver" value="unsure">
+         <label for="unsure">Not sure</label><br>
+         <input type="text" id="liver-issue" placeholder="If yes, mention the problem">
+
+         <p class="questions">Do you have any conditions or therapies that could affect your immune system,
+            e.g. leukemia, AIDS, HIV infection, radiotherapy, chemotherapy?</p>
+         <input type="radio" id="yes" name="immunity" value="yes">
+         <label for="yes">Yes</label>
+         <input type="radio" id="no" name="immunity" value="no">
+         <label for="no">No</label>
+         <input type="radio" id="unsure" name="immunity" value="unsure">
+         <label for="unsure">Not sure</label><br>
+         <input type="text" id="immunity-issue" placeholder="If yes, mention the problem">
+
+         
+
+
+       </div>
+
+    </div> 
+    
+      <script type="text/javascript">
+        $(function(){
+    var $select = $(".1-100");
+    for (i=1;i<=100;i++){
+        $select.append($('<option></option>').val(i).html(i))
+       }
+      });
+    </script>
+
+</body>
+</html>

@@ -27,11 +27,12 @@ nav ul li {
 nav ul li a {
   color: white;
   display: block;
-  padding: 0 20px;
+  padding: 0 40px;
   line-height: 70px;
-  font-size: 24px;
+  font-size: 25px;
   background: #063247;
   transition: 0.5s;
+  border-radius: 5px;
 }
 
 nav ul .dropdown {
@@ -42,17 +43,20 @@ nav ul .dropdown {
   position: absolute;
   top: 100%; /* Bottom of button */
   right: 0;
-  margin-left: -100px; /* More to the left */
+  margin-left: -200px; /* More to the left */
 }
 nav ul li a:hover {
   background-color: azure;
   color: rgb(6, 6, 61);
 }
+nav ul li a.active{
+  background-color: cornsilk;
+}
 
 nav ul ul {
   position: absolute;
   top: 85px;
-  border-top: 3px solid #23dbdb;
+  
   opacity: 0;
   visibility: hidden;
   display: flex;
@@ -76,15 +80,17 @@ nav ul ul li {
 }
 nav ul ul li a {
   line-height: 50px;
+  float: left;
+  font-size: 25px;
 }
 
 .calculate {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 500px;
-  height: 500px;
+  height: 400px;
   align-items: center;
-  margin-left: 500px;
+  margin-top: -10px
 }
 
 #heading {
@@ -94,10 +100,38 @@ nav ul ul li a {
 .description {
   width: 55%;
   right: 50%;
-  padding: 3%;
-  border: 1px solid #333;
-  border-radius: 4px;
+  padding: 2%;
+  border-style: solid;
+  border-color: rgb(138, 138, 134);
+  border-width: 4px;
+  margin-left: 50px;
+  background-color: azure;
+  
 }
+ .superclass {
+   display: flex;
+   flex-direction: row;
+   padding: 4px;
+ }
+ .description2 {
+   width: 500px;
+   height: 500px;
+   border: 1px solid #333;
+   border-radius: 4px;
+   padding: 15px;
+   margin-top: 40px;
+   margin-left: 50px;
+   border-style: solid;
+  border-color: rgb(138, 138, 134);
+  border-width: 4px;
+  background-color: azure;
+  
+ }
+
+  .info{
+  font-size: 1.4rem;
+  background-color: #e7e0e0;
+ }
 
 #image {
   padding: 2%;
@@ -117,17 +151,19 @@ nav ul ul li a {
   border-left-width: 4px;
   border-top-width: 4px;
   align-items: right;
+  background-color: azure;
 }
 .glucose,
 .sweat {
   display: flex;
   flex-direction: column;
-  margin: 50px;
-  padding: 30px;
+  margin: 20px;
+  padding: 20px;
   border-style: inset;
   border-color: beige;
   border-left-width: 4px;
   border-top-width: 4px;
+  background-color: azure;
 }
 
 #gvalue,
@@ -162,4 +198,117 @@ nav ul ul li a {
   margin: 4px 2px;
   cursor: pointer;
   width: 300px;
+  font-size: 18px;
+}
+
+
+#glucosechart {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 150%;
+  height: 90%;
+  margin-top: 40px;
+  border-color: rgb(138, 138, 134);
+  border-width: 4px;
+  border-style: solid;
+  background-color: azure;
+  
+}
+
+#glucosechart td, #glucosechart th {
+  border: 1px solid rgb(34, 29, 29);
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+#glucosechart tr:hover {background-color: #ddd;}
+
+#glucosechart th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  
+}
+
+.user-profile{
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+   padding: 15px;
+   margin-top: 20px;
+   margin-left: 50px;
+  
+  
+  
+}
+
+.user-profile input[type=text], input[type=email], input[type=tel]{
+
+    width: 300px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #cfcbcb;
+  
+}
+
+.general, .medical{
+  height: 800px;
+  border-radius: 4px;
+   padding: 15px;
+   margin-top: 10px;
+   margin-left: 50px;
+   border-style: solid;
+  border-color: rgb(138, 138, 134);
+  border-width: 4px;
+  background-color: azure;
+  
+}
+.general{
+  width: 500px;
+  margin-left: 20px;
+  padding: 30px;
+  height: 750px;
+}
+
+#head1, #head2, #head3{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.questions{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.research{
+  display: flex;
+  flex-direction: row;
+}
+.significance, .circuit{
+  height: 550px;
+  width: 500px;
+  border-radius: 4px;
+   padding: 25px;
+   margin-top: 60px;
+   margin-left: 80px;
+   border-style: solid;
+  border-color: rgb(138, 138, 134);
+  border-width: 4px;
+  background-color: azure;
+  
+}
+.significance{
+  margin-left: 250px;
+}
+
+.circuit img{
+  height: 550px;
+  width: 500px;
 }

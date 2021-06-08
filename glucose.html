@@ -7,6 +7,14 @@
     <title>Calculate Glucose</title>
     <link rel="stylesheet" href="styles.css"/>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        body{
+          background-image: url(https://bit.ly/3w3b6rH);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+      </style>
 </head>
 <body>
 
@@ -16,23 +24,119 @@
       $("#nav-placeholder").load("navigation.html");
     });
     </script>
+  <h1 id="heading">Body Glucose Level</h1>
+ <div class="superclass">
+    <div class="description2">
+        <p class="info">Blood glucose is a sugar that the bloodstream carries to all cells in the body to supply energy. 
+            A person needs to keep blood sugar levels within a safe range to reduce the risk of diabetes and heart disease. 
+            Blood glucose monitoring measures the amount of sugar that the blood is transporting during a single instant.</p>
+        
+        <p class="info">By constantly regulating the blood glucose level, one can keep a good check on their health, thus paving
+            a way to a healthy and happy life!
+        </p>
 
-    <div class="calculate">
+        <p class="info">What are you waiting for!? Check your blood glucose level</p>
+     </div>
+ 
+     <div class="calculate">
+ 
+        <div class="glucose">
+         <label for="gvalue">Enter Glucose value</label>
+            <input type="text" name="gvalue" id="gvalue">
+            <input type="button" id="btn1" value="Know my range" onclick="getValue()">
+            <p id="result"></p>
+        </div>
+ 
+        <div class="sweat">
+            <label for="sweatvalue">Enter Conductivity of Sweat</label>
+            <input type="text" name="sweatvalue" id="sweatvalue">
+            <input type="button" id="btn2" value="Get Glucose Level" onclick="getValue2()">
+            <p id="glucose"></p>
+            <input type="button" id="btn3" value="Get Glucose Range" onclick="setValue()">
+           
+            <p id = "result1"></p>
+ 
+        </div>
+     </div>
 
-       <div class="glucose">
-        <label for="gvalue">Enter Glucose value</label>
-           <input type="text" name="gvalue" id="gvalue">
-           <input type="button" id="btn1" value="Know my range">
-       </div>
+        <div class="chart">
+  <table id="glucosechart">
+    <tr>
+      <th>Condition</th>
+      <th>Fasting</th>
+      <th>Just ate</th>
+      <th>3 hours after eating</th>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>80-100</td>
+      <td>170-200</td>
+      <td>120-140</td>
+    </tr>
+    <tr>
+        <td>Pre-Diabetic</td>
+        <td>101-125</td>
+        <td>190-230</td>
+        <td>140-160</td>
+      </tr>
+      <tr>
+        <td>Diabetic</td>
+        <td>126+</td>
+        <td>220-300</td>
+        <td>200+</td>
+      </tr>
+    
+       </table>
+        </div>
+       
+     </div>
 
-       <div class="sweat">
-        <label for="sweatvalue">Enter Conductivity of Sweat</label>
-           <input type="text" name="sweatvalue" id="sweatvalue">
-           <input type="button" id="btn2" value="Get Glucose Level">
-           <input type="button" id="btn3" value="Get Glucose Range">
+     <script type="text/javascript">
+     
+     function getValue(){
+         var g = document.getElementById("gvalue").value;
+         var button = 1;
+         getRange(g,button);
+     }
+     function getValue2(){
+         var g = document.getElementById("sweatvalue").value;
+         getGlucose(g);
+     }
+     var gv;
+     function getGlucose(g){
+         const minv = 270;
+         const maxv = 420;
+         const gmin = 80;
+         const gmax = 140
 
-       </div>
-      
-    </div>
+          gv = (g-minv)/(maxv-minv)*(gmax-gmin) + gmin;
+         document.getElementById("glucose").innerHTML="Your Blood Glucose level is "+gv+ "mg/dL";
+     }
+     function setValue(){
+         var button = 2;
+         getRange(gv,button);
+     }
+
+     function getRange(g, button){
+        var grange;
+            if(g<140 && g>90)
+                grange="Normal";
+            else if(g>140)
+                grange="High";
+            else
+                grange="Low";
+
+            if(button==2){
+            document.getElementById("result1").innerHTML="Your Blood Glucose level is "+grange;
+            }
+            if(button==1){
+                document.getElementById("result").innerHTML="Your Blood Glucose level is "+grange;
+            }
+        
+
+       }
+    
+    </script>
+    
 </body>
 </html>
